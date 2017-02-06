@@ -18,7 +18,7 @@ res.send('hello express');
 });
 
 app.get('/about',middleware.requireauthentication, function (req,res) {
-res.send('About');
+res.send('About us !');
 
 });
 //console.log(__dirname);
