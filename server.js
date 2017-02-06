@@ -1,6 +1,8 @@
 var express= require('express');
 var app =express();
-var port =3000;
+var PORT =3000;
+//var middleware=require('./middleware.js');
+
 var middleware={
   requireauthentication: function (req,res,next) {
     console.log("private route hit");
@@ -23,6 +25,6 @@ res.send('About us !');
 });
 //console.log(__dirname);
 app.use(express.static(__dirname+"/public"));
-app.listen(port,function(){
-  console.log('express server started. Port no:'+port);
+app.listen(PORT,function(){
+  console.log('express server started. Port no:'+PORT);
 });
